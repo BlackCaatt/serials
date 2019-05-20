@@ -25,7 +25,10 @@ class LoginActivity : AppCompatActivity(), TextWatcher, View.OnClickListener {
         email_input.addTextChangedListener(this)
         password_input.addTextChangedListener(this)
         login_btn.setOnClickListener(this)
-
+        create_acc.setOnClickListener{
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
         mAuth = FirebaseAuth.getInstance()
     }
 
