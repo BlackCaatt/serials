@@ -9,12 +9,6 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".FirebaseHelper">
-        </activity>
-        <activity android:name=".utils.GlideApp">
-        </activity>
-        <activity android:name=".utils.FirebaseHelper">
-        </activity>
         <activity android:name=".RegisterActivity">
         </activity>
         <activity android:name=".MainActivity">
