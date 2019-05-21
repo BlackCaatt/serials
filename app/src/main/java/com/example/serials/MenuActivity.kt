@@ -11,7 +11,7 @@ class MenuActivity : BaseActivity(1) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_menu)
         setupBottomNavigation()
         Log.d(TAG, "onCreate")
 
