@@ -9,10 +9,19 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".ValueEventListenerAdapter">
         </activity>
         <activity android:name=".FirebaseHelper">
         </activity>
+=======
+        <activity android:name=".FirebaseHelper">
+        </activity>
+        <activity android:name=".utils.GlideApp">
+        </activity>
+        <activity android:name=".utils.FirebaseHelper">
+        </activity>
+>>>>>>> parent of c0ce342... Revert "idk"
         <activity android:name=".RegisterActivity">
         </activity>
         <activity android:name=".MainActivity">
