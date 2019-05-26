@@ -4,11 +4,10 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
-<<<<<<< HEAD
-import kotlinx.android.synthetic.main.bottom_navigation_view.*
-=======
+
+
 import kotlinx.android.synthetic.main.bottom_nagivation_view.*
->>>>>>> parent of c0ce342... Revert "idk"
+
 
 abstract class BaseActivity(val navNumber:Int) : AppCompatActivity() {
     private val TAG ="BaseActivity"

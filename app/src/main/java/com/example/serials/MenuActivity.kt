@@ -5,10 +5,9 @@ import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.Log
-<<<<<<< HEAD
+
 import com.example.serials.FirebaseHelper
 import com.example.serials.ValueEventListenerAdapter
-=======
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -23,7 +22,7 @@ import com.squareup.picasso.Picasso
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
->>>>>>> parent of c0ce342... Revert "idk"
+
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_menu.*
 import kotlinx.android.synthetic.main.serial_row.view.*
@@ -31,12 +30,7 @@ import kotlinx.android.synthetic.main.serial_row.view.*
 
 
 class MenuActivity : BaseActivity(1) {
-<<<<<<< HEAD
     private val TAG = "MenuActivity"
-    private lateinit var mFirebase: FirebaseHelper
-
-=======
->>>>>>> parent of c0ce342... Revert "idk"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,11 +52,12 @@ class MenuActivity : BaseActivity(1) {
                     Log.d("newMessage", it.toString())
                     val serial = it.getValue(Serial::class.java)
                     if (serial != null) {
-                        adapter.add(SerialItem(serial))
-                    }
-                }
+                    adapter.add(SerialItem(serial))
 
+                 }
+                }
                 recyclerview_serials.adapter = adapter
+
             }
 
             override fun onCancelled(p0: DatabaseError) {
@@ -70,36 +65,25 @@ class MenuActivity : BaseActivity(1) {
             }
         })
 
-        mFirebase = FirebaseHelper(this)
-
-        mFirebase.database.child("serials")
-            .addValueEventListener(ValueEventListenerAdapter{
-                val posts = it.children.map { it.getValue(Serials::class.java)!! }
-                Log.d(TAG, "feedPosts: ${posts.joinToString("\n", "\n")}")
-            })
-
-
     }
 
 }
-class Serial(val name: String, val pic: String){
-    constructor() : this("","")
-}
+
 
 class SerialItem(val serial: Serial): Item<ViewHolder>() {
     override fun bind(viewHolder: ViewHolder, position: Int) {
         viewHolder.itemView.textview_serials.text = serial.name
 
-        Picasso.get().load(serial.pic).into(viewHolder.itemView.imageview_serials)
+        Picasso.get().load(serial.image).into(viewHolder.itemView.imageview_serials)
     }
 
     override fun getLayout(): Int {
         return R.layout.serial_row
     }
 }
-<<<<<<< HEAD
-data class Serials(val name:String = "", val image: String = "")
-=======
+
+class Serial(val name: String, val image:String) {
+    constructor():this("", "")
+}
 
 
->>>>>>> parent of c0ce342... Revert "idk"

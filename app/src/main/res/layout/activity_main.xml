@@ -51,11 +51,8 @@
 
     </android.support.v7.widget.Toolbar>
 
-<<<<<<< HEAD
-=======
+
     <include layout="@layout/bottom_nagivation_view" />
->>>>>>> parent of c0ce342... Revert "idk"
 
 
-    <include layout="@layout/bottom_navigation_view" />
 </android.support.constraint.ConstraintLayout>
